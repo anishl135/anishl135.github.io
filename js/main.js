@@ -145,5 +145,30 @@
 		skillsWayPoint();
 	});
 
+	var swiper = new Swiper('.swiper-container', {
+		slidesPerView: 1, // Display 1 certificate set per slide
+		spaceBetween: 20, // Adjust the spacing between certificates
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+		},
+	});
+	window.addEventListener("scroll", function() {
+		var nav = document.querySelector("nav");
+		var aboutMeSection = document.getElementById("about-me");
 
+		var offset = aboutMeSection.offsetTop;
+
+		if (window.pageYOffset >= offset) {
+			nav.style.position = "fixed";
+			nav.style.top = "0";
+		} else {
+			nav.style.position = "relative";
+			nav.style.top = "auto";
+		}
+	});
 }());
