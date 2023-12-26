@@ -339,7 +339,7 @@ h1, h2, h3, h4, h5, h6, figure {
   background: #2F3C4F;
   background: #3644ff;
 }
-.fh5co-bg-dark .fh5co-heading h2 {
+.fh5co-bg-dark .fh5co-heading h2, h1 {
   color: #fff !important;
   font-family: Castellar;
 }
@@ -750,13 +750,15 @@ h1, h2, h3, h4, h5, h6, figure {
   left: 0;
   top: 0;
 }
-
+.col-fixed-width {
+  width: 16.66667%; /* 1/6 of the container width for 6 columns */
+}
 .work {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   position: relative;
-  height: 270px;
+  height: 100%;
   width: 100%;
   display: table;
   overflow: hidden;
@@ -1383,14 +1385,26 @@ input[type="text"] {
   max-height: 1000h; /* Set a maximum height for the section */
   overflow-y: auto;
 }
-var mySwiper = new Swiper('.swiper-cont', {
+
+/* var swiper = new Swiper('.swiper-container', {
+  navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+  },
+  
+  // Disable manual swipe
+  allowTouchMove: false,
+}); */
+
+
+/* var mySwiper = new Swiper('.swiper-cont', {
   // Optional parameters
   loop: true, // Enable loop mode if you want the slides to wrap around.
   navigation: {
     nextEl: '.swiper-button-next', // CSS class for the next button
     prevEl: '.swiper-button-prev', // CSS class for the previous button
   },
-});
+}); */
 /* 
 Allow vertical scrolling for the Swiper container
 #swiper-container {
@@ -1536,4 +1550,137 @@ text{
     font-family:cursive;
     box-sizing:border-box;
   }
-  
+  /* Customize the appearance of the teacher cards */
+.teacher-card {
+  margin-bottom: 20px;
+  color: white; /* Set text color to white */
+}
+
+.teacher-card img {
+  max-width: 100%;
+  height: 200px;
+}
+.teacher-card h3, h2 {
+  color: white;
+}
+.certificate {
+  text-align: center;
+  padding: 20px;
+  margin: 10px;
+  height: 380px;
+
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.certificate img {
+  max-width: 100%;
+  height: auto;
+}
+
+.certificate-grid {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.scrollable-h2 {
+  max-height: 150px; /* Set the maximum height for scrolling */
+  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+/* Add animation class */
+.animate-scroll {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.overlay {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #555;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav a {
+  font-family: "Kaushan Script";
+  color: white;
+  font-weight: bold; /* Add the semicolon here */
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+
+nav a:hover {
+  background-color: #555;
+  opacity: 0.5
+}
+
+section {
+  padding: 20px;
+  margin-top: 70px; /* Adjust margin-top to prevent content from being hidden behind the fixed navbar */
+}
+.menu-button {
+  display: none;
+  background-color: #555;
+  color: white;
+  border: none;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Mobile menu styles */
+.mobile-menu {
+  display: none;
+  padding-top: 60px; /* Adjust padding to prevent overlap with fixed navbar */
+}
+
+/* Add more styles for the mobile menu as needed */
+
+/* Responsive styles for the mobile menu button */
+@media only screen and (max-width: 600px) {
+  nav {
+      display: none; /* Hide the navigation bar on small screens initially */
+  }
+
+  .menu-button {
+      display: block; /* Show the menu button on small screens */
+  }
+
+  .mobile-menu {
+      display: block; /* Show the mobile menu on small screens */
+  }
+}
+
+
+
+
+
+
+
