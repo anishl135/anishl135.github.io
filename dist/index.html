@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anish Lohani, Biologist &amp; Builder</title>
+  <meta name="description" content="Anish Lohani, Biological Sciences student at Carnegie Mellon University in Qatar. RNA biology, computational splicing analysis, and software for the bench." />
+  <meta name="color-scheme" content="dark light" />
+  <meta name="theme-color" content="#0A0812" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A0812'/%3E%3Cpath d='M16 20 C26 14 38 14 48 20' stroke='%239B5CFF' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3Cpath d='M20 44 C30 38 42 38 48 42' stroke='%23FF6B9D' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" />
+
+  <!-- Typefaces -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Motion libraries -->
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/split-type@0.3.4/umd/index.min.js"></script>
+
+  <script defer src="./src/main.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/style-B4SPa0tN.css">
+</head>
+<body>
+
+  <!-- Decorative layers -->
+  <div class="noise" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="top">
+    <a class="brand" href="#top">Anish&nbsp;Lohani<span class="brand-dot">.</span></a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#work">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#toolbox">Toolbox</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle colour theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5 5l1.6 1.6M17.4 17.4L19 19M19 5l-1.6 1.6M6.6 17.4L5 19"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5 8.5 8.5 0 1 0 20.5 14.2z"/></svg>
+      </button>
+      <a class="btn btn-magnetic" href="https://docs.google.com/document/d/15gKohHXqlTC7N-YH6hN5duYEGXGX1iQi8hb42Xzvu74" target="_blank" rel="noopener">
+        <span class="btn-label">Resume</span>
+        <span class="btn-arrow" aria-hidden="true">↗</span>
+      </a>
+      <a class="btn btn-magnetic" href="mailto:lohanianish4135@gmail.com">
+        <span class="btn-label">Say hello</span>
+        <span class="btn-arrow" aria-hidden="true">↗</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ MOBILE NAV ============ -->
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+    <div class="mobile-menu-inner">
+      <a class="m-link" href="#about"><span class="m-index mono">01</span>About</a>
+      <a class="m-link" href="#research"><span class="m-index mono">02</span>Research</a>
+      <a class="m-link" href="#publications"><span class="m-index mono">03</span>Publications</a>
+      <a class="m-link" href="#work"><span class="m-index mono">04</span>Experience</a>
+      <a class="m-link" href="#projects"><span class="m-index mono">05</span>Projects</a>
+      <a class="m-link" href="#toolbox"><span class="m-index mono">06</span>Toolbox</a>
+      <a class="m-link" href="blog.html"><span class="m-index mono">07</span>Blog</a>
+      <a class="btn btn-big btn-magnetic" href="https://docs.google.com/document/d/15gKohHXqlTC7N-YH6hN5duYEGXGX1iQi8hb42Xzvu74" target="_blank" rel="noopener">
+        <span class="btn-label">Resume</span>
+        <span class="btn-arrow" aria-hidden="true">↗</span>
+      </a>
+      <a class="btn btn-big btn-magnetic" href="mailto:lohanianish4135@gmail.com">
+        <span class="btn-label">Say hello</span>
+        <span class="btn-arrow" aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-label="Introduction">
+      <span class="watermark watermark-hero" aria-hidden="true">AUG</span>
+      <div class="hero-outer">
+        <div class="hero-meta mono fade-up">
+          <span class="hero-meta-item"><span class="pulse-dot" aria-hidden="true"></span>Open to research, Summer '26</span>
+          <span class="hero-meta-item">Doha, Qatar · 25.2854° N, 51.5310° E</span>
+          <span class="hero-meta-item">CMU-Q · Biological Sciences</span>
+        </div>
+
+        <div class="hero-main">
+          <h1 class="hero-title" id="heroTitle">
+            <span class="h-line">The cell is the best</span>
+            <span class="h-line em-line">engineer I know.</span>
+            <span class="h-line">I study its code -</span>
+            <span class="h-line">and write my own.</span>
+          </h1>
+
+          <div class="hero-visual" aria-hidden="true">
+            <div class="hero-helix" id="heroHelix"></div>
+            <p class="fig-note mono">fig. 00: a single strand, unwound</p>
+          </div>
+        </div>
+
+        <!-- ============ PERIODIC NAMEPLATE: ANiSH ============ -->
+        <div class="periodic-block hero-periodic">
+        <div class="periodic-row">
+          <div class="p-tile p-tile-a" tabindex="0">
+            <div class="p-tile-inner">
+              <div class="p-tile-face p-tile-front">
+                <span class="p-num mono">135</span>
+                <span class="p-flip-hint" aria-hidden="true">↻</span>
+                <span class="p-orbit" aria-hidden="true"><i class="p-orbit-ring p-orbit-ring-1"></i><i class="p-orbit-ring p-orbit-ring-2"></i><i class="p-orbit-nucleus"></i></span>
+                <span class="p-symbol">A</span>
+                <span class="p-name">Anishnium</span>
+                <span class="p-mass mono">187.393</span>
+                <span class="p-config mono">[Og] 8s&sup2; 6f&sup1;&#8308; 7d&sup1;</span>
+                <span class="p-meta mono">synthetic · one atom</span>
+                <span class="p-class">Human</span>
+                <span class="p-ruler" aria-hidden="true"></span>
+              </div>
+              <div class="p-tile-face p-tile-back" aria-hidden="true">
+                <span class="p-fact-symbol">A</span>
+                <span class="p-fact-label mono">About me</span>
+                <p class="p-fact-text">Synthetic element with a single known atom, and it's the one running this website. First isolated in Kathmandu, now detected in Doha and Pittsburgh.</p>
+              </div>
+            </div>
+          </div>
+          <div class="p-tile p-tile-ni" tabindex="0">
+            <div class="p-tile-inner">
+              <div class="p-tile-face p-tile-front">
+                <span class="p-num mono">28</span>
+                <span class="p-flip-hint" aria-hidden="true">↻</span>
+                <span class="p-orbit" aria-hidden="true"><i class="p-orbit-ring p-orbit-ring-1"></i><i class="p-orbit-ring p-orbit-ring-2"></i><i class="p-orbit-nucleus"></i></span>
+                <span class="p-symbol">Ni</span>
+                <span class="p-name">Nickel</span>
+                <span class="p-mass mono">58.693</span>
+                <span class="p-config mono">[Ar] 3d&#8310; 4s&sup2;</span>
+                <span class="p-meta mono">1751 · Cronstedt</span>
+                <span class="p-class">Transition Metal</span>
+                <span class="p-ruler" aria-hidden="true"></span>
+              </div>
+              <div class="p-tile-face p-tile-back" aria-hidden="true">
+                <span class="p-fact-symbol">Ni</span>
+                <span class="p-fact-label mono">Element fact</span>
+                <p class="p-fact-text">Named “Kupfernickel”, devil's copper, by miners who couldn't get copper out of it. It's ferromagnetic, so yes: it sticks to fridges.</p>
+              </div>
+            </div>
+          </div>
+          <div class="p-tile p-tile-s" tabindex="0">
+            <div class="p-tile-inner">
+              <div class="p-tile-face p-tile-front">
+                <span class="p-num mono">16</span>
+                <span class="p-flip-hint" aria-hidden="true">↻</span>
+                <span class="p-orbit" aria-hidden="true"><i class="p-orbit-ring p-orbit-ring-1"></i><i class="p-orbit-ring p-orbit-ring-2"></i><i class="p-orbit-nucleus"></i></span>
+                <span class="p-symbol">S</span>
+                <span class="p-name">Sulfur</span>
+                <span class="p-mass mono">32.066</span>
+                <span class="p-config mono">[Ne] 3s&sup2; 3p&#8308;</span>
+                <span class="p-meta mono">antiquity · always here</span>
+                <span class="p-class">Nonmetal</span>
+                <span class="p-ruler" aria-hidden="true"></span>
+              </div>
+              <div class="p-tile-face p-tile-back" aria-hidden="true">
+                <span class="p-fact-symbol">S</span>
+                <span class="p-fact-label mono">Element fact</span>
+                <p class="p-fact-text">Ancient “brimstone”, and the chemistry behind why onions make you cry. In the lab, its smell usually means something interesting is happening.</p>
+              </div>
+            </div>
+          </div>
+          <div class="p-tile p-tile-h" tabindex="0">
+            <div class="p-tile-inner">
+              <div class="p-tile-face p-tile-front">
+                <span class="p-num mono">1</span>
+                <span class="p-flip-hint" aria-hidden="true">↻</span>
+                <span class="p-orbit" aria-hidden="true"><i class="p-orbit-ring p-orbit-ring-1"></i><i class="p-orbit-ring p-orbit-ring-2"></i><i class="p-orbit-nucleus"></i></span>
+                <span class="p-symbol">H</span>
+                <span class="p-name">Hydrogen</span>
+                <span class="p-mass mono">1.008</span>
+                <span class="p-config mono">1s&sup1;</span>
+                <span class="p-meta mono">1766 · Cavendish</span>
+                <span class="p-class">Nonmetal</span>
+                <span class="p-ruler" aria-hidden="true"></span>
+              </div>
+              <div class="p-tile-face p-tile-back" aria-hidden="true">
+                <span class="p-fact-symbol">H</span>
+                <span class="p-fact-label mono">Element fact</span>
+                <p class="p-fact-text">The universe's most abundant element: one proton, one electron, and the entire engine of acids and bases behind every pH you've ever calculated.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+          <p class="fig-note mono">fig. 05, the periodic table of me: <strong>A + Ni + S + H</strong></p>
+        </div>
+
+        <div class="hero-foot">
+          <p class="hero-sub mono">
+            I'm <strong>Anish Lohani</strong>, an aspiring researcher fluent in both wet and dry lab.
+            RNA biology meets computation, dissecting alternative splicing at the Younis Lab, CMU-Q,
+            while building the software that makes the data talk.
+          </p>
+          <a class="hero-scroll" href="#about" aria-label="Scroll to about">
+            <span class="hero-scroll-text mono">Scroll</span>
+            <span class="hero-scroll-line" aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <!-- decorative nucleotide rail -->
+        <div class="seq-tape" aria-hidden="true">
+          <span>A</span><span>U</span><span>G</span><span>C</span><span>A</span><span>U</span><span>G</span><span>C</span>
+          <span>A</span><span>U</span><span>G</span><span>C</span><span>A</span><span>U</span><span>G</span><span>C</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>RNA splicing</span><i>✳</i>
+        <i class="seq-glyph mono">A·U</i>
+        <span>computational biology</span><i>✳</i>
+        <span>Python</span><i>✳</i>
+        <span>R</span><i>✳</i>
+        <span>AlphaFold</span><i>✳</i>
+        <i class="seq-glyph mono">G·C</i>
+        <span>ELISA</span><i>✳</i>
+        <span>flow cytometry</span><i>✳</i>
+        <span>Gibson cloning</span><i>✳</i>
+        <span>machine learning</span><i>✳</i>
+        <span>Doha → Pittsburgh → Kathmandu</span><i>✳</i>
+        <span>RNA splicing</span><i>✳</i>
+        <i class="seq-glyph mono">A·U</i>
+        <span>computational biology</span><i>✳</i>
+        <span>Python</span><i>✳</i>
+        <span>R</span><i>✳</i>
+        <span>AlphaFold</span><i>✳</i>
+        <i class="seq-glyph mono">G·C</i>
+        <span>ELISA</span><i>✳</i>
+        <span>flow cytometry</span><i>✳</i>
+        <span>Gibson cloning</span><i>✳</i>
+        <span>machine learning</span><i>✳</i>
+        <span>Doha → Pittsburgh → Kathmandu</span><i>✳</i>
+      </div>
+    </div>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <span class="watermark" aria-hidden="true">RNA</span>
+
+      <!-- Portrait -->
+      <div class="image-panel portrait-panel reveal" style="margin-bottom: 3rem;">
+        <span class="p-specimen mono">specimen · no. 135 · Anishnium</span>
+        <div class="p-orbit portrait-orbit" aria-hidden="true"><i class="p-orbit-ring p-orbit-ring-1"></i><i class="p-orbit-ring p-orbit-ring-2"></i><i class="p-orbit-nucleus"></i></div>
+        <img src="https://www.anishlohani.com.np/assets/img/me.jpg" alt="Anish Lohani, Biological Sciences student at Carnegie Mellon University in Qatar" loading="lazy" />
+        <span class="image-panel-caption mono">Anish Lohani · CMU-Q, RNA biology &amp; computation</span>
+        <span class="p-ruler portrait-ruler" aria-hidden="true"></span>
+      </div>
+
+      <div class="section-head reveal">
+        <span class="section-index mono">01 <span class="base-tag" aria-hidden="true">5'UTR</span></span>
+        <div class="section-head-txt">
+          <p class="section-label mono">About</p>
+          <h2 class="section-title">Kathmandu → Doha → wherever the science takes me.</h2>
+        </div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-main">
+          <p class="reveal">I grew up taking things apart in Kathmandu, first toys, then microscopes, then my own
+          lab notebooks. I graduated as valedictorian of <strong>Budhanilkantha School</strong> and moved to
+          Education City, Doha, to study <strong>Biological Sciences at Carnegie Mellon University in Qatar</strong>.</p>
+          <p class="reveal">My thesis-length obsession is <strong>RNA biology</strong>: the layer where the genome
+          makes its most interesting decisions. I split my week between the wet lab, the command line and
+          the writing desk, because a result you can't communicate is a result you don't have.</p>
+          <p class="reveal">In the long run I want to build <strong>computational tools that change how biology
+          is done</strong>, the kind researchers open the way they open a pipette. I'm looking for research
+          opportunities in computational genomics, and I'm always up for a hard problem.</p>
+
+          <div class="edu reveal">
+            <div class="edu-row">
+              <div class="edu-main">
+                <h3>BS Biological Sciences</h3>
+                <p class="mono">Carnegie Mellon University in Qatar · 2024 to present</p>
+              </div>
+              <span class="edu-note mono">Honors Modern Biology · Cell Biology · Principles of Computing</span>
+            </div>
+            <div class="edu-row">
+              <div class="edu-main">
+                <h3>Valedictorian</h3>
+                <p class="mono">Budhanilkantha School · Nepal · 2023</p>
+              </div>
+              <span class="edu-note mono">National merit, class of 2023</span>
+            </div>
+            <div class="edu-row">
+              <div class="edu-main">
+                <h3>QSIURP Research Grant</h3>
+                <p class="mono">Carnegie Mellon University in Qatar · Summer 2026</p>
+              </div>
+              <span class="edu-note mono">Qatar Student-Initiated Undergraduate Research Program: competitive funding for student-proposed summer research</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="stats reveal" aria-label="Quick numbers">
+          <div class="stat">
+            <span class="stat-num" data-count="1" data-suffix="">0</span>
+            <span class="stat-label mono">peer-reviewed publication</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-count="4" data-suffix="">0</span>
+            <span class="stat-label mono">splicing algorithms in my pipeline</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-count="6" data-suffix="">0</span>
+            <span class="stat-label mono">research roles</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-count="3" data-suffix="">0</span>
+            <span class="stat-label mono">countries so far</span>
+          </div>
+        </aside>
+      </div>
+
+      <!-- figures: central dogma + tRNA -->
+      <div class="figure-row">
+        <figure class="card figure-card reveal">
+          <div class="card-top mono">
+            <span class="card-tag">Fig. 03: central dogma</span>
+          </div>
+          <svg class="dogma-diagram" viewBox="0 0 600 170" role="img" aria-label="Central dogma of molecular biology">
+            <defs>
+              <marker id="cdArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                <path d="M0 0 L10 5 L0 10 z" fill="currentColor" />
+              </marker>
+            </defs>
+            <g class="cd-dna">
+              <path d="M40 80 Q 52 60 64 80 T 88 80 T 112 80 T 136 80" />
+              <path d="M40 80 Q 52 100 64 80 T 88 80 T 112 80 T 136 80" />
+              <line x1="64" y1="72" x2="64" y2="88" />
+              <line x1="88" y1="72" x2="88" y2="88" />
+              <line x1="112" y1="72" x2="112" y2="88" />
+            </g>
+            <text class="cd-label" x="88" y="132">DNA</text>
+            <line class="cd-arrow" x1="172" y1="80" x2="202" y2="80" marker-end="url(#cdArrow)" />
+            <text class="cd-sub" x="187" y="52">transcription</text>
+            <g class="cd-mrna">
+              <path d="M232 80 Q 252 60 272 80 Q 292 100 312 80 Q 332 60 352 80" />
+              <circle cx="272" cy="78" r="3" />
+              <circle cx="312" cy="82" r="3" />
+            </g>
+            <text class="cd-label" x="292" y="132">mRNA</text>
+            <line class="cd-arrow" x1="392" y1="80" x2="422" y2="80" marker-end="url(#cdArrow)" />
+            <text class="cd-sub" x="407" y="52">translation</text>
+            <g class="cd-protein">
+              <line x1="462" y1="80" x2="542" y2="80" />
+              <circle cx="472" cy="80" r="8" />
+              <circle cx="497" cy="80" r="8" />
+              <circle cx="522" cy="80" r="8" />
+              <circle cx="547" cy="80" r="8" />
+            </g>
+            <text class="cd-label" x="505" y="132">protein</text>
+          </svg>
+          <figcaption class="fig-note mono">DNA writes, RNA reads, proteins do the work.</figcaption>
+        </figure>
+
+        <figure class="card figure-card reveal">
+          <div class="card-top mono">
+            <span class="card-tag">Fig. 04: transfer RNA</span>
+          </div>
+          <svg class="trna-diagram" viewBox="0 0 320 320" role="img" aria-label="Cloverleaf structure of transfer RNA">
+            <g class="trna">
+              <line x1="130" y1="30" x2="130" y2="115" />
+              <line x1="190" y1="30" x2="190" y2="115" />
+              <g class="trna-tick">
+                <line x1="136" y1="50" x2="184" y2="50" />
+                <line x1="136" y1="66" x2="184" y2="66" />
+                <line x1="136" y1="82" x2="184" y2="82" />
+                <line x1="136" y1="98" x2="184" y2="98" />
+              </g>
+              <text class="trna-label" x="106" y="26">5'</text>
+              <text class="trna-label" x="200" y="26">3'</text>
+              <path class="trna-arm" d="M160 130 L 120 130 L 96 124" />
+              <circle class="trna-loop" cx="66" cy="112" r="28" />
+              <text class="trna-label" x="38" y="164">D-loop</text>
+              <path class="trna-arm" d="M160 130 L 200 130 L 224 124" />
+              <circle class="trna-loop" cx="254" cy="112" r="28" />
+              <text class="trna-label" x="232" y="164">TψC</text>
+              <path class="trna-arm" d="M160 140 L 160 205" />
+              <circle class="trna-loop" cx="160" cy="238" r="30" />
+              <g class="trna-tick">
+                <line x1="146" y1="238" x2="174" y2="238" />
+              </g>
+              <text class="trna-label" x="132" y="292">anticodon</text>
+              <circle class="trna-loop trna-loop-sm" cx="226" cy="210" r="12" />
+              <text class="trna-label" x="206" y="248">variable</text>
+              <circle class="trna-hub" cx="160" cy="130" r="5" />
+            </g>
+          </svg>
+          <figcaption class="fig-note mono">the adapter that reads three letters at a time</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ IMAGE BREAK ============ -->
+    <div class="image-break" aria-hidden="true">
+      <img src="https://images.unsplash.com/photo-1552072092-7f9b8d63efcb?w=1920&q=80" alt="" loading="lazy" />
+      <div class="image-break-overlay">
+        <span class="image-break-text">"One gene, many messages."</span>
+      </div>
+    </div>
+
+    <!-- ============ RESEARCH ============ -->
+    <section class="section" id="research">
+      <div class="section-head reveal">
+        <span class="section-index mono">02 <span class="base-tag" aria-hidden="true">5'–A·U–3'</span></span>
+        <div class="section-head-txt">
+          <p class="section-label mono">Current research</p>
+          <h2 class="section-title">Splicing is where the genome gets creative.</h2>
+        </div>
+      </div>
+
+      <div class="research-grid">
+        <article class="card research-card reveal">
+          <!-- Card image -->
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&q=80" alt="RNA molecular structure" loading="lazy" />
+          </div>
+          <div class="card-top mono">
+            <span class="card-tag">Younis Lab · CMU-Q</span>
+            <span class="card-date">Spring 2026 to now</span>
+          </div>
+          <h3 class="card-title">Dissecting the dark matter of splicing</h3>
+          <p class="card-body">
+            One gene, many messages, alternative splicing is how a single DNA sequence encodes a
+            whole repertoire of proteins. I analyse differential splicing across cell states with
+            four independent algorithms, <strong>leafcutter, DEXSeq, MAJIQ and rMATs</strong>,
+            four dialects of the same biological story. My current project builds a
+            <strong>confidence matrix</strong>, an XGBoost model trained on all four tools'
+            outputs that scores every candidate splicing change and surfaces the biologically
+            relevant ones as a single, exhaustive catalogue for the wet lab to chase.
+          </p>
+
+          <p class="lab-label mono">What I do in the lab</p>
+          <ul class="lab-list">
+            <li><strong>Consensus calls</strong>, run all four splicing algorithms on the same cell-state
+            comparisons and reconcile where they disagree, so a change is only called when the
+            tools line up.</li>
+            <li><strong>Confidence matrix with XGBoost</strong>, a gradient-boosted model that learns from the four
+            tools' outputs, junction reads, exon-level counts, PSI estimates, to score how
+            confident we are in every splicing change and rank them for the wet lab to chase.</li>
+            <li><strong>Dry lab → wet lab</strong>, the breast-cancer splicing analysis starts as dry lab in Nepal,
+            and every candidate finding gets validated at the bench in Doha. Same story, both sides
+            of the pipette.</li>
+            <li><strong>Lab tooling</strong>, Python and R tools for the splicing pipeline: reproducible analysis
+            scripts, figure pipelines and data prep the whole group actually uses.</li>
+          </ul>
+
+          <ul class="tag-list mono">
+            <li>RNA biology</li>
+            <li>deep learning</li>
+            <li>genomics</li>
+          </ul>
+        </article>
+
+        <div class="research-side">
+          <article class="card side-card splice-card reveal">
+            <div class="card-top mono">
+              <span class="card-tag">Fig. 01: alternative splicing</span>
+            </div>
+            <svg class="splice-diagram" viewBox="0 0 560 250" role="img" aria-label="Alternative splicing diagram">
+              <g class="s-gene">
+                <line x1="30" y1="34" x2="530" y2="34" />
+                <text class="s-label" x="18" y="30">5'</text>
+                <text class="s-label" x="540" y="30">3'</text>
+                <rect class="s-exon" x="44" y="26" width="72" height="16" rx="3" />
+                <rect class="s-exon" x="164" y="26" width="56" height="16" rx="3" />
+                <rect class="s-exon" x="266" y="26" width="88" height="16" rx="3" />
+                <rect class="s-exon" x="400" y="26" width="74" height="16" rx="3" />
+                <text class="s-label s-label-strong" x="48" y="16">E1</text>
+                <text class="s-label s-label-strong" x="168" y="16">E2</text>
+                <text class="s-label s-label-strong" x="270" y="16">E3</text>
+                <text class="s-label s-label-strong" x="404" y="16">E4</text>
+              </g>
+              <g class="s-iso">
+                <line x1="30" y1="120" x2="530" y2="120" />
+                <rect class="s-box" x="44" y="112" width="72" height="16" rx="3" />
+                <rect class="s-box" x="164" y="112" width="56" height="16" rx="3" />
+                <rect class="s-box" x="266" y="112" width="88" height="16" rx="3" />
+                <rect class="s-box" x="400" y="112" width="74" height="16" rx="3" />
+                <path class="s-junction" d="M120 112 Q 140 100 160 112" />
+                <path class="s-junction" d="M224 112 Q 245 100 262 112" />
+                <path class="s-junction" d="M358 112 Q 379 100 396 112" />
+                <text class="s-label" x="36" y="98">isoform α: all exons</text>
+              </g>
+              <g class="s-iso">
+                <line x1="30" y1="172" x2="530" y2="172" />
+                <rect class="s-box" x="44" y="164" width="72" height="16" rx="3" />
+                <rect class="s-box" x="164" y="164" width="56" height="16" rx="3" />
+                <rect class="s-box" x="400" y="164" width="74" height="16" rx="3" />
+                <path class="s-junction" d="M120 164 Q 210 152 396 164" />
+                <text class="s-label" x="36" y="150">isoform β: skips exon 3</text>
+              </g>
+              <g class="s-iso">
+                <line x1="30" y1="224" x2="530" y2="224" />
+                <rect class="s-box" x="44" y="216" width="72" height="16" rx="3" />
+                <rect class="s-box" x="266" y="216" width="88" height="16" rx="3" />
+                <rect class="s-box" x="400" y="216" width="74" height="16" rx="3" />
+                <path class="s-junction" d="M120 216 Q 195 204 262 216" />
+                <path class="s-junction" d="M358 216 Q 379 204 396 216" />
+                <text class="s-label" x="36" y="202">isoform γ: skips exon 2</text>
+              </g>
+            </svg>
+            <p class="card-body">One gene, four exons: three different messages.</p>
+          </article>
+
+          <article class="card side-card reveal">
+            <div class="card-top mono">
+              <span class="card-tag">Currently learning</span>
+            </div>
+            <ul class="now-list">
+              <li><span class="now-mark" aria-hidden="true">→</span> CNN architectures for genomics</li>
+              <li><span class="now-mark" aria-hidden="true">→</span> Transformer models for RNA</li>
+              <li><span class="now-mark" aria-hidden="true">→</span> Building lab software people actually use</li>
+              <li><span class="now-mark" aria-hidden="true">→</span> Reading <em>The Gene</em>: Siddhartha Mukherjee</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+
+      <!-- ============ ABOUT THE LAB: Younis Lab ============ -->
+      <article class="card lab-card reveal">
+        <div class="card-top mono">
+          <span class="card-tag">About the lab</span>
+          <span class="card-date">Younis Lab · CMU-Q</span>
+        </div>
+        <div class="lab-card-grid">
+          <div class="lab-card-main">
+            <h3 class="card-title sm">The lab that turns one gene into many messages.</h3>
+            <p class="card-body">
+              The Younis Lab studies <strong>post-transcriptional gene regulation</strong>, how the
+              spliceosome strips introns out of pre-mRNA with surgical precision, and how splicing
+              mistakes push cells toward disease. Its signature line of work: <strong>minor
+              introns</strong>, a rare class removed by a specialised spliceosome, act as
+              stress-induced molecular switches whose activity is controlled by the unstable catalytic
+              RNA <strong>U6atac</strong>. Projects mix dry and wet lab, RNA-seq, high-throughput
+              screening and drug discovery, with undergraduates co-authoring the papers.
+            </p>
+            <ul class="tag-list mono">
+              <li>RNA biology</li>
+              <li>minor intron splicing</li>
+              <li>spliceosome</li>
+              <li>cancer biology</li>
+            </ul>
+          </div>
+          <div class="lab-card-side">
+            <div class="lab-fact">
+              <span class="lab-fact-label mono">Principal investigator</span>
+              <span class="lab-fact-value">Dr. Ihab Younis</span>
+              <span class="lab-fact-sub">Teaching Professor · Head, CMU-Q Biological Sciences · PhD, The Ohio State University</span>
+            </div>
+            <div class="lab-fact">
+              <span class="lab-fact-label mono">Focus</span>
+              <span class="lab-fact-value">Intron splicing · minor spliceosome · cancer</span>
+              <span class="lab-fact-sub">Post-transcriptional regulation of gene expression, from bench to RNA-seq</span>
+            </div>
+            <div class="lab-fact">
+              <span class="lab-fact-label mono">Home</span>
+              <span class="lab-fact-value">Carnegie Mellon University in Qatar</span>
+              <span class="lab-fact-sub">Education City, Doha · Office 3070</span>
+            </div>
+            <div class="card-links mono">
+              <a href="https://www.cmu.edu/bio/people/faculty/younis.html" target="_blank" rel="noopener">Lab profile ↗</a>
+              <a href="https://www.qatar.cmu.edu/academics/biological-sciences/" target="_blank" rel="noopener">Biological Sciences ↗</a>
+            </div>
+          </div>
+        </div>
+        <div class="p-orbit lab-orbit" aria-hidden="true"><i class="p-orbit-ring p-orbit-ring-1"></i><i class="p-orbit-ring p-orbit-ring-2"></i><i class="p-orbit-nucleus"></i></div>
+        <span class="p-ruler lab-ruler" aria-hidden="true"></span>
+      </article>
+    </section>
+
+    <!-- ============ PUBLICATIONS & CONFERENCES ============ -->
+    <section class="section" id="publications">
+      <span class="watermark" aria-hidden="true">pubs</span>
+      <div class="section-head reveal">
+        <span class="section-index mono">03 <span class="base-tag" aria-hidden="true">doi:10.xxxx</span></span>
+        <div class="section-head-txt">
+          <p class="section-label mono">Publications &amp; Conferences</p>
+          <h2 class="section-title">Findings I've written down and talked about.</h2>
+        </div>
+      </div>
+
+      <div class="pub-grid">
+        <article class="card reveal">
+          <div class="card-top mono">
+            <span class="card-tag">Publication</span>
+            <span class="card-date">Molecules · 2025</span>
+          </div>
+          <h3 class="card-title sm">Functionalized carbon nanotubes for enhanced cancer diagnosis &amp; imaging</h3>
+          <p class="card-body">
+            A peer-reviewed review of covalent and non-covalent nanotube functionalization for
+            electrochemical biosensors, optical imaging and MRI, co-authored with the Murshid group.
+          </p>
+          <div class="card-links mono">
+            <a href="https://scholar.google.com/citations?user=HV1o0D8AAAAJ&hl=en" target="_blank" rel="noopener">Read on Scholar ↗</a>
+            <a href="https://www.mdpi.com/1420-3049/30/5/970" target="_blank" rel="noopener">Open access ↗</a>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-top mono">
+            <span class="card-tag">Conference talk</span>
+            <span class="card-date">YURC · Feb 2026</span>
+          </div>
+          <h3 class="card-title sm">Analysing differential splicing patterns between BRCA cancer and normal tissues</h3>
+          <p class="card-body">
+            Presented at the Yale Undergraduate Research Conference (YURC), February 2026.
+          </p>
+          <!-- TODO: add the YURC abstract/poster link when you have it -->
+          <div class="card-links mono">
+            <a href="#" rel="noopener">Abstract / poster: add link ↗</a>
+          </div>
+        </article>
+
+        <!-- Empty slot for future talks & publications -->
+        <article class="card pub-placeholder reveal">
+          <div class="card-top mono">
+            <span class="card-tag">Next slot</span>
+            <span class="card-date">reserved</span>
+          </div>
+          <div class="pub-placeholder-body">
+            <span class="pub-plus" aria-hidden="true">＋</span>
+            <h3 class="card-title sm">The next talk or paper goes here.</h3>
+            <p class="card-body">Future publications and conference talks will land in this slot. Check back soon.</p>
+          </div>
+          <p class="fig-note mono">fig. 06: reserved for the next one</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ HELIX INTERLUDE (simplified with image) ============ -->
+    <section class="helix-interlude" id="helix" aria-label="The code is a spiral">
+      <div class="helix-interlude-bg">
+        <img src="https://images.unsplash.com/photo-1618172193763-c511deb635ca?w=1920&q=80" alt="" loading="lazy" />
+      </div>
+      <div class="helix-pin">
+        <div class="helix-copy">
+          <p class="section-label mono">Fig. 02: the structure</p>
+          <h2 class="helix-title">The code is a <em>spiral</em>.</h2>
+          <p class="helix-sub">Two strands, one message, held together by <strong>A·U</strong> and
+          <strong>G·C</strong> pairs. DNA writes, RNA reads, proteins do the work. My research lives in
+          the middle layer, where one gene becomes many messages.</p>
+          <span class="base-float bf-a">A</span>
+          <span class="base-float bf-u">U</span>
+          <span class="base-float bf-g">G</span>
+          <span class="base-float bf-c">C</span>
+        </div>
+        <div class="helix-stage" aria-hidden="true">
+          <div class="helix-image">
+            <img src="https://images.unsplash.com/photo-1618172193763-c511deb635ca?w=800&q=80" alt="DNA double helix structure" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DUAL IMAGE PANEL: Research detail ============ -->
+    <div style="max-width: 1180px; margin: 3rem auto; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+      <div class="image-panel image-panel-small reveal">
+        <img src="https://images.unsplash.com/photo-1581594294883-5109c202942f?w=800&q=80" alt="Microscopy" loading="lazy" />
+        <span class="image-panel-caption mono">fluorescence imaging</span>
+      </div>
+      <div class="image-panel image-panel-small reveal">
+        <img src="https://images.unsplash.com/photo-1530026405186-ed1f139313f8?w=800&q=80" alt="Lab work" loading="lazy" />
+        <span class="image-panel-caption mono">wet lab experiments</span>
+      </div>
+    </div>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section" id="work">
+      <span class="watermark" aria-hidden="true">bench</span>
+
+      <!-- Image panel -->
+      <div class="image-panel image-panel-medium reveal" style="margin-bottom: 3rem;">
+        <img src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=1200&q=80" alt="Scientific laboratory" loading="lazy" />
+        <span class="image-panel-caption mono">wet lab · CMU-Q campus</span>
+      </div>
+
+      <div class="section-head reveal">
+        <span class="section-index mono">04 <span class="base-tag" aria-hidden="true">3'–UTR</span></span>
+        <div class="section-head-txt">
+          <p class="section-label mono">Experience</p>
+          <h2 class="section-title">Research &amp; work across three countries.</h2>
+        </div>
+      </div>
+
+      <!-- ============ RESEARCH EXPERIENCE ============ -->
+      <div class="experience-subsection reveal">
+        <h3 class="experience-subtitle mono">Research Experience</h3>
+        <ol class="timeline">
+          <li class="tl-item reveal">
+            <div class="tl-meta mono">
+              <span class="tl-role">Research Assistant · Younis Lab</span>
+              <span class="tl-date">Fall 2026</span>
+            </div>
+            <div class="tl-main">
+              <h3 class="tl-org">Younis Lab · CMU-Q, with Gianni Di Caro &amp; Ihab Younis</h3>
+              <p class="tl-loc mono">Doha, Qatar</p>
+              <ul class="tl-points">
+                <li>Building a confidence matrix for splicing, combining predictions from rMATs, leafcutter, DEXSeq and MAJIQ into a single score per event</li>
+                <li>Training XGBoost models to rank splicing changes and surface the biologically relevant ones for the wet lab</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="tl-item reveal">
+            <div class="tl-meta mono">
+              <span class="tl-role">Research Fellow · QSIURP Grantee</span>
+              <span class="tl-date">Summer 2026</span>
+            </div>
+            <div class="tl-main">
+              <h3 class="tl-org">Younis Lab · CMU-Q</h3>
+              <p class="tl-loc mono">Doha, Qatar</p>
+              <ul class="tl-points">
+                <li>Awarded a Qatar Student-Initiated Undergraduate Research Program (QSIURP) grant for summer research</li>
+                <li>Analysed differential splicing in public breast-cancer RNA-seq datasets, MCF10A, MCF7, T47D and MDA-MB-231, with rMATs and leafcutter, plus featureCounts-based gene expression</li>
+                <li>Goal: computationally predict candidate major intron, minor intron and twintron differences between normal and cancer cell lines</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="tl-item reveal">
+            <div class="tl-meta mono">
+              <span class="tl-role">Research Intern · Younis Lab</span>
+              <span class="tl-date">Spring 2026</span>
+            </div>
+            <div class="tl-main">
+              <h3 class="tl-org">Younis Lab · CMU-Q</h3>
+              <p class="tl-loc mono">Doha, Qatar</p>
+              <ul class="tl-points">
+                <li>Built a Streamlit GUI pipeline for differential splicing analysis: FASTQ → BAM alignment with Rsubread, index &amp; sort with samtools, gene expression with featureCounts</li>
+                <li>Ran all four splicing algorithms, rMATs, MAJIQ, DEXSeq and leafcutter, then filtered to genes expressed in both conditions</li>
+                <li>Generated plots from the pipeline output for the lab's splicing comparisons</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="tl-item reveal">
+            <div class="tl-meta mono">
+              <span class="tl-role">Research Intern</span>
+              <span class="tl-date">Jun to Aug 2025</span>
+            </div>
+            <div class="tl-main">
+              <h3 class="tl-org">Henninger Lab · Carnegie Mellon University</h3>
+              <p class="tl-loc mono">Pittsburgh, US</p>
+              <ul class="tl-points">
+                <li>Amplified, purified and cloned the intrinsically disordered regions of ILF3, DAZAP1, IGF2BP2 &amp; hnRNPDL</li>
+                <li>Assembled insert–plasmid constructs via Gibson cloning</li>
+                <li>Tested how IDRs tune GAL4 activity in luciferase reporter assays</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="tl-item reveal">
+            <div class="tl-meta mono">
+              <span class="tl-role">Research Fellow</span>
+              <span class="tl-date">Jul to Sep 2023</span>
+            </div>
+            <div class="tl-main">
+              <h3 class="tl-org">Shikhar Biotech</h3>
+              <p class="tl-loc mono">Kathmandu, Nepal</p>
+              <ul class="tl-points">
+                <li>Validated IgG purity with ELISA; separated and identified proteins with SDS-PAGE and western blotting</li>
+                <li>Prepared DMEM culture media; ran flow cytometry on E. coli intracellular proteins</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="tl-item reveal">
+            <div class="tl-meta mono">
+              <span class="tl-role">Research Intern</span>
+              <span class="tl-date">Jan to May 2018</span>
+            </div>
+            <div class="tl-main">
+              <h3 class="tl-org">Bucrini Pharmaceutical</h3>
+              <p class="tl-loc mono">Nepal</p>
+              <ul class="tl-points">
+                <li>Analysed flow cytometry data and produced reports with PyMOL and CytoFlex</li>
+                <li>Supported cell culture, protein purification and patient diagnostics</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <!-- ============ WORK EXPERIENCE ============ -->
+      <div class="experience-subsection reveal">
+        <h3 class="experience-subtitle mono">Work Experience</h3>
+        <ol class="timeline">
+          <li class="tl-item reveal">
+            <div class="tl-meta mono">
+              <span class="tl-role">Course Assistant · 76-101</span>
+              <span class="tl-date">Jan to May 2025</span>
+            </div>
+            <div class="tl-main">
+              <h3 class="tl-org">Carnegie Mellon University in Qatar</h3>
+              <p class="tl-loc mono">Doha, Qatar</p>
+              <ul class="tl-points">
+                <li>Mentored 30+ students through synthesis, case analysis and open letters</li>
+                <li>Ran writing workshops, graded responses and proctored examinations</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="tl-item reveal">
+            <div class="tl-meta mono">
+              <span class="tl-role">Laboratory Support Assistant</span>
+              <span class="tl-date">Aug to Dec 2024</span>
+            </div>
+            <div class="tl-main">
+              <h3 class="tl-org">Carnegie Mellon University in Qatar</h3>
+              <p class="tl-loc mono">Doha, Qatar</p>
+              <ul class="tl-points">
+                <li>Built an exhaustive inventory of 300+ laboratory chemicals</li>
+                <li>Prepared buffers, silver salts and inorganic reagents; learned HPLC, UV-Vis spectroscopy and melting-point analysis</li>
+                <li>Assessed waste toxicity to shape lab disposal policy</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <!-- ============ EXTRACURRICULARS ============ -->
+      <div class="beyond reveal">
+        <p class="section-label mono">Extracurriculars</p>
+        <div class="beyond-grid">
+          <p><strong>Leprosy Mission Nepal</strong>, independent researcher running antibiotic-resistance testing and patient-care workshops, 2023 to now.</p>
+          <p><strong>Team Knowledge Park</strong>, co-founded an IoT smart-agriculture project on Arduino; multiple hackathon and science-fair wins.</p>
+          <p><strong>Science, Technology &amp; Robotics Club</strong>, vice president; ran olympiad training and national tech fests.</p>
+          <p><strong>Autism Care Nepal</strong>, volunteer tutor in literacy and communication, 2021 to 2022.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ IMAGE PANEL: Before Gel ============ -->
+    <div class="image-panel image-panel-medium reveal" style="max-width: 1180px; margin: 0 auto;">
+      <img src="https://images.unsplash.com/photo-1581594294883-5109c202942f?w=1200&q=80" alt="Microscopy cells" loading="lazy" />        <span class="image-panel-caption mono">microscopy · cellular structures</span>
+    </div>
+
+    <!-- ============ GEL DIVIDER ============ -->
+    <div class="gel" aria-hidden="true">
+      <div class="gel-lane"><i style="top:22%;height:12%"></i><i style="top:48%;height:16%"></i></div>
+      <div class="gel-lane"><i style="top:14%;height:8%"></i></div>
+      <div class="gel-lane"><i style="top:30%;height:10%"></i><i style="top:62%;height:18%"></i></div>
+      <div class="gel-lane"><i style="top:20%;height:14%"></i></div>
+      <div class="gel-lane"><i style="top:38%;height:22%"></i><i style="top:72%;height:9%"></i></div>
+      <div class="gel-lane"><i style="top:16%;height:11%"></i></div>
+      <div class="gel-lane"><i style="top:26%;height:8%"></i><i style="top:56%;height:15%"></i></div>
+      <div class="gel-lane"><i style="top:34%;height:19%"></i></div>
+      <div class="gel-lane"><i style="top:24%;height:12%"></i><i style="top:66%;height:10%"></i></div>
+    </div>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section" id="projects">
+      <span class="watermark" aria-hidden="true">code</span>
+      <div class="section-head reveal">
+        <span class="section-index mono">05 <span class="base-tag" aria-hidden="true">A·U · G·C</span></span>
+        <div class="section-head-txt">
+          <p class="section-label mono">Projects</p>
+          <h2 class="section-title">Small tools with real bench value.</h2>
+        </div>
+      </div>
+
+      <div class="projects-grid">
+        <a class="p-card reveal" href="https://github.com/anishl135/TwintronDetect" target="_blank" rel="noopener">
+          <div class="p-card-top mono">
+            <span class="p-index">P-01</span>
+            <span class="p-arrow" aria-hidden="true">↗</span>
+          </div>
+          <h3 class="p-title">Twintron Detect</h3>
+          <p class="p-desc">Scans RNA-seq splicing calls for twintrons, introns-within-introns, flagging candidate major intron, minor intron and twintron events across conditions.</p>
+          <div class="tag-list mono">
+            <span>Python</span><span>RNA splicing</span><span>Genomics</span>
+          </div>
+        </a>
+
+        <a class="p-card reveal" href="https://anishl135.com.np/younis_lab/" target="_blank" rel="noopener">
+          <div class="p-card-top mono">
+            <span class="p-index">P-02</span>
+            <span class="p-arrow" aria-hidden="true">↗</span>
+          </div>
+          <h3 class="p-title">Younis Lab Website</h3>
+          <p class="p-desc">A website I built for the Younis Lab at CMU-Q, research overview, people and publications, designed to make the lab's science easy to browse.</p>
+          <div class="tag-list mono">
+            <span>Web</span><span>HTML/CSS</span><span>Lab tools</span>
+          </div>
+        </a>
+
+        <a class="p-card reveal" href="https://github.com/anishl135" target="_blank" rel="noopener">
+          <div class="p-card-top mono">
+            <span class="p-index">P-03</span>
+            <span class="p-arrow" aria-hidden="true">↗</span>
+          </div>
+          <h3 class="p-title">Interactive Biochemical Pathway Creator</h3>
+          <p class="p-desc">Draw, connect and simulate metabolic pathways in the browser, built for teaching metabolism without the static textbook diagram.</p>
+          <div class="tag-list mono">
+            <span>Web</span><span>Python</span><span>Graphs</span>
+          </div>
+        </a>
+
+        <a class="p-card reveal" href="https://github.com/anishl135" target="_blank" rel="noopener">
+          <div class="p-card-top mono">
+            <span class="p-index">P-04</span>
+            <span class="p-arrow" aria-hidden="true">↗</span>
+          </div>
+          <h3 class="p-title">DNA Sequence Processor</h3>
+          <p class="p-desc">GC content, transcription, translation and open-reading-frame scanning from a single FASTA, the Swiss Army knife of sequence files.</p>
+          <div class="tag-list mono">
+            <span>Python</span><span>Bioinformatics</span><span>CLI</span>
+          </div>
+        </a>
+
+        <a class="p-card reveal" href="https://github.com/anishl135" target="_blank" rel="noopener">
+          <div class="p-card-top mono">
+            <span class="p-index">P-05</span>
+            <span class="p-arrow" aria-hidden="true">↗</span>
+          </div>
+          <h3 class="p-title">Biochem Data Plotter</h3>
+          <p class="p-desc">A plotting toolkit for enzyme kinetics and spectrophotometry data, transform, fit and publish figures without leaving the terminal.</p>
+          <div class="tag-list mono">
+            <span>Python</span><span>matplotlib</span><span>Data viz</span>
+          </div>
+        </a>
+
+        <a class="p-card reveal" href="https://github.com/anishl135" target="_blank" rel="noopener">
+          <div class="p-card-top mono">
+            <span class="p-index">P-06</span>
+            <span class="p-arrow" aria-hidden="true">↗</span>
+          </div>
+          <h3 class="p-title">Image → ASCII Art</h3>
+          <p class="p-desc">Downsamples photographs into terminal-ready ASCII with adjustable dithering. The fastest way to make your labmates laugh.</p>
+          <div class="tag-list mono">
+            <span>Python</span><span>Image processing</span>
+          </div>
+        </a>
+
+        <a class="p-card reveal" href="https://github.com/anishl135" target="_blank" rel="noopener">
+          <div class="p-card-top mono">
+            <span class="p-index">P-07</span>
+            <span class="p-arrow" aria-hidden="true">↗</span>
+          </div>
+          <h3 class="p-title">Smart Roomba</h3>
+          <p class="p-desc">A line-following, obstacle-avoiding robot that maps a room as it moves, my first love affair with sensors and control loops.</p>
+          <div class="tag-list mono">
+            <span>Arduino</span><span>C++</span><span>IoT</span>
+          </div>
+        </a>
+
+        <a class="p-card reveal" href="https://github.com/anishl135" target="_blank" rel="noopener">
+          <div class="p-card-top mono">
+            <span class="p-index">P-08</span>
+            <span class="p-arrow" aria-hidden="true">↗</span>
+          </div>
+          <h3 class="p-title">Chemistry toolbelt</h3>
+          <p class="p-desc">Molar-mass from formula, pH from concentration, a growing set of chemistry utilities that keep finding their way into my notebooks.</p>
+          <div class="tag-list mono">
+            <span>Python</span><span>Chemistry</span>
+          </div>
+        </a>
+      </div>
+
+      <p class="projects-foot mono reveal"><a href="https://github.com/anishl135" target="_blank" rel="noopener">github.com/anishl135, more in the archive ↗</a></p>
+    </section>
+
+    <!-- ============ IMAGE BREAK: Projects → Toolbox ============ -->
+    <div class="image-break" aria-hidden="true">
+      <img src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=1920&q=80" alt="" loading="lazy" />
+      <div class="image-break-overlay">
+        <span class="image-break-text">"The bench and the terminal, two sides of the same coin."</span>
+      </div>
+    </div>
+
+    <!-- ============ TOOLBOX ============ -->
+    <section class="section" id="toolbox">
+      <span class="watermark" aria-hidden="true">tools</span>
+      <div class="section-head reveal">
+        <span class="section-index mono">06 <span class="base-tag" aria-hidden="true">G·C pairing</span></span>
+        <div class="section-head-txt">
+          <p class="section-label mono">Toolbox</p>
+          <h2 class="section-title">Comfortable at the bench and the terminal.</h2>
+        </div>
+      </div>
+
+      <div class="toolbox-grid">
+        <div class="tool-group reveal">
+          <h3 class="tool-group-title mono">Computation</h3>
+          <ul class="tool-pills">
+            <li>Python</li><li>NumPy / pandas</li><li>matplotlib</li><li>R</li><li>ggplot2</li>
+            <li>Java</li><li>JavaScript</li><li>MySQL</li><li>Git</li>
+          </ul>
+        </div>
+        <div class="tool-group reveal">
+          <h3 class="tool-group-title mono">Wet lab</h3>
+          <ul class="tool-pills">
+            <li>ELISA</li><li>SDS-PAGE</li><li>Western blot</li><li>Flow cytometry</li>
+            <li>Cell culture</li><li>Gibson cloning</li><li>Immunofluorescence</li><li>Protein purification</li>
+          </ul>
+        </div>
+        <div class="tool-group reveal">
+          <h3 class="tool-group-title mono">Analysis &amp; structure</h3>
+          <ul class="tool-pills">
+            <li>PyMOL</li><li>AlphaFold</li><li>leafcutter</li><li>DEXSeq</li><li>MAJIQ</li>
+            <li>rMATs</li><li>CrystalMaker</li><li>LaTeX</li>
+          </ul>
+        </div>
+        <div class="tool-group reveal">
+          <h3 class="tool-group-title mono">Hardware</h3>
+          <ul class="tool-pills">
+            <li>Arduino</li><li>Sensor networks</li><li>Serial protocols</li><li>IoT prototyping</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ IMAGE PANEL: After Experience ============ -->
+    <div class="image-panel image-panel-medium reveal" style="max-width: 1180px; margin: 3rem auto;">
+      <img src="https://images.unsplash.com/photo-1559539503-2f1bce8e88a4?w=1200&q=80" alt="CMU Qatar campus" loading="lazy" />        <span class="image-panel-caption mono">Education City · CMU-Q campus</span>
+    </div>
+
+    <!-- ============ GEL DIVIDER ============ -->
+    <div class="gel" aria-hidden="true">
+      <div class="gel-lane"><i style="top:30%;height:15%"></i><i style="top:58%;height:8%"></i></div>
+      <div class="gel-lane"><i style="top:18%;height:9%"></i></div>
+      <div class="gel-lane"><i style="top:26%;height:12%"></i><i style="top:64%;height:16%"></i></div>
+      <div class="gel-lane"><i style="top:40%;height:20%"></i></div>
+      <div class="gel-lane"><i style="top:22%;height:10%"></i><i style="top:70%;height:12%"></i></div>
+      <div class="gel-lane"><i style="top:14%;height:7%"></i></div>
+      <div class="gel-lane"><i style="top:28%;height:18%"></i><i style="top:60%;height:9%"></i></div>
+      <div class="gel-lane"><i style="top:36%;height:11%"></i></div>
+      <div class="gel-lane"><i style="top:20%;height:13%"></i><i style="top:52%;height:14%"></i></div>
+    </div>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact">
+      <span class="watermark watermark-right" aria-hidden="true">talk</span>
+
+      <!-- Image panel before contact -->
+      <div class="image-panel image-panel-small reveal" style="margin-bottom: 3rem;">
+        <img src="https://images.unsplash.com/photo-1530026405186-ed1f139313f8?w=1200&q=80" alt="Abstract science" loading="lazy" />
+        <span class="image-panel-caption mono">let's collaborate</span>
+      </div>
+
+      <p class="section-label mono reveal">Contact <span class="base-tag" aria-hidden="true">A–U pairing</span></p>
+      <h2 class="contact-title reveal">Have a hypothesis?<br /><em class="em-line">Let's test it.</em></h2>
+      <p class="contact-sub reveal">Collaborations, research roles, or just a good paper to trade, my inbox is open.</p>
+
+      <div class="contact-actions reveal">
+        <a class="btn btn-big btn-magnetic" href="mailto:lohanianish4135@gmail.com">
+          <span class="btn-label">lohanianish4135@gmail.com</span>
+          <span class="btn-arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+
+      <div class="contact-links mono reveal">
+        <a href="https://docs.google.com/document/d/15gKohHXqlTC7N-YH6hN5duYEGXGX1iQi8hb42Xzvu74" target="_blank" rel="noopener">Resume ↗</a>
+        <a href="https://github.com/anishl135" target="_blank" rel="noopener">GitHub ↗</a>
+        <a href="https://scholar.google.com/citations?user=HV1o0D8AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar ↗</a>
+        <a href="https://www.anishlohani.com.np" target="_blank" rel="noopener">Old site ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="mono">© <span id="year">2026</span> Anish Lohani, built by hand in Doha, no templates harmed.</p>
+      <p class="mono">Set in Instrument Serif &amp; Space Grotesk.</p>
+      <a class="back-top mono" href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anish Lohani · Blog</title>
+  <meta name="description" content="Anish Lohani, notes from the bench: splicing, code and lab life. Coming soon." />
+  <meta name="color-scheme" content="dark light" />
+  <meta name="theme-color" content="#0A0812" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A0812'/%3E%3Cpath d='M16 20 C26 14 38 14 48 20' stroke='%239B5CFF' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3Cpath d='M20 44 C30 38 42 38 48 42' stroke='%23FF6B9D' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" />
+
+  <!-- Typefaces -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Motion libraries -->
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/split-type@0.3.4/umd/index.min.js"></script>
+
+  <script defer src="./src/main.js"></script>
+  <script defer src="./src/blog.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/style-B4SPa0tN.css">
+</head>
+<body>
+
+  <!-- Decorative layers -->
+  <div class="noise" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="top">
+    <a class="brand" href="index.html#top">Anish&nbsp;Lohani<span class="brand-dot">.</span></a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html#about">About</a>
+      <a href="index.html#research">Research</a>
+      <a href="index.html#publications">Publications</a>
+      <a href="index.html#work">Experience</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#toolbox">Toolbox</a>
+      <a href="blog.html" class="is-active" aria-current="page">Blog</a>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle colour theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5 5l1.6 1.6M17.4 17.4L19 19M19 5l-1.6 1.6M6.6 17.4L5 19"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5 8.5 8.5 0 1 0 20.5 14.2z"/></svg>
+      </button>
+      <a class="btn btn-magnetic" href="https://docs.google.com/document/d/15gKohHXqlTC7N-YH6hN5duYEGXGX1iQi8hb42Xzvu74" target="_blank" rel="noopener">
+        <span class="btn-label">Resume</span>
+        <span class="btn-arrow" aria-hidden="true">↗</span>
+      </a>
+      <a class="btn btn-magnetic" href="mailto:lohanianish4135@gmail.com">
+        <span class="btn-label">Say hello</span>
+        <span class="btn-arrow" aria-hidden="true">↗</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ MOBILE NAV ============ -->
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+    <div class="mobile-menu-inner">
+      <a class="m-link" href="index.html#about"><span class="m-index mono">01</span>About</a>
+      <a class="m-link" href="index.html#research"><span class="m-index mono">02</span>Research</a>
+      <a class="m-link" href="index.html#publications"><span class="m-index mono">03</span>Publications</a>
+      <a class="m-link" href="index.html#work"><span class="m-index mono">04</span>Experience</a>
+      <a class="m-link" href="index.html#projects"><span class="m-index mono">05</span>Projects</a>
+      <a class="m-link" href="index.html#toolbox"><span class="m-index mono">06</span>Toolbox</a>
+      <a class="m-link" href="blog.html"><span class="m-index mono">07</span>Blog</a>
+      <a class="btn btn-big btn-magnetic" href="https://docs.google.com/document/d/15gKohHXqlTC7N-YH6hN5duYEGXGX1iQi8hb42Xzvu74" target="_blank" rel="noopener">
+        <span class="btn-label">Resume</span>
+        <span class="btn-arrow" aria-hidden="true">↗</span>
+      </a>
+      <a class="btn btn-big btn-magnetic" href="mailto:lohanianish4135@gmail.com">
+        <span class="btn-label">Say hello</span>
+        <span class="btn-arrow" aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ============ BLOG: COMING SOON ============ -->
+    <section class="section blog-hero" id="blog">
+      <span class="watermark" aria-hidden="true">blog</span>
+      <div class="section-head reveal">
+        <span class="section-index mono">WIP <span class="base-tag" id="blogComingSoonTag" aria-hidden="true">draft</span></span>
+        <div class="section-head-txt">
+          <p class="section-label mono">Blog</p>
+          <h2 class="section-title" id="blogHeroTitle">Notes from the bench, coming soon.</h2>
+        </div>
+      </div>
+      <p class="blog-note mono reveal" id="blogHeroNote">Splicing, code and lab life, written down. The first post is on the way.</p>
+      <p class="fig-note mono blog-feed-status" id="blogFeedStatus"></p>
+    </section>
+
+    <!-- ============ BLOG: POSTS (filled by src/blog.js) ============ -->
+    <section class="section blog-posts" id="blogPostsSection" hidden>
+      <div class="section-head reveal">
+        <span class="section-index mono">01 <span class="base-tag" aria-hidden="true">feed</span></span>
+        <div class="section-head-txt">
+          <p class="section-label mono">Latest posts</p>
+          <h2 class="section-title">From the bench.</h2>
+        </div>
+      </div>
+      <div class="blog-posts-list" id="blogPosts"></div>
+    </section>
+
+    <!-- ============ BLOG: VIDEO ============ -->
+    <section class="section blog-watch">
+      <div class="section-head reveal">
+        <span class="section-index mono">02 <span class="base-tag" aria-hidden="true">video</span></span>
+        <div class="section-head-txt">
+          <p class="section-label mono" id="blogVideoLabel">While you wait</p>
+          <h2 class="section-title">Something to play in the meantime.</h2>
+        </div>
+      </div>
+      <div class="video-embed reveal">
+        <iframe src="https://www.youtube.com/embed/vzjhA6mmY70" title="YouTube video player" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <p class="fig-note mono">fig. 01: placeholder soundtrack for a blog in progress</p>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="mono">© <span id="year">2026</span> Anish Lohani, built by hand in Doha, no templates harmed.</p>
+      <p class="mono">Set in Instrument Serif &amp; Space Grotesk.</p>
+      <a class="back-top mono" href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+</body>
+</html>
